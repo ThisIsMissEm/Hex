@@ -5,7 +5,7 @@ require 'lib/hex'
 use Rack::CommonLogger
  
 if ENV['RACK_ENV'] == 'development'
-  use Rack::ShowExceptions
+	use Rack::ShowExceptions
 end
  
 #
