@@ -11,4 +11,6 @@ end
 #
 # Create and configure a hex instance
 #
-run Hex::Server.new
+run Hex::Server.new({
+  :test => "test"
+})
