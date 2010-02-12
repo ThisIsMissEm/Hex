@@ -144,7 +144,7 @@ module Hex
       
       status, headers, body = Hex::Site.new(@config).route(@request)
       
-      @response.body = body
+      @response.body = [body] # weird bug on Archlinux means I need to pass body as an array.
       headers.each {|key, value| @response[key] = value}
       
       @response['Cache-Control'] = if Hex.env == 'production'
