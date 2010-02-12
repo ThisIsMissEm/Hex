@@ -1,7 +1,7 @@
 require 'lib/hex'
  
 # Rack config
-# use Rack::Static, :urls => ['/css', '/js', '/images', '/favicon.ico'], :root => 'public'
+use Rack::Static, :urls => ['/css', '/js', '/images'], :root => "demo/public"
 use Rack::CommonLogger
  
 if ENV['RACK_ENV'] == 'development'
@@ -11,6 +11,4 @@ end
 #
 # Create and configure a hex instance
 #
-run Hex::Server.new({
-  :test => "test"
-})
+run Hex::Server.new

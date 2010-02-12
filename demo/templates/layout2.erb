@@ -2,14 +2,10 @@
 <html lang="en">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<% unless @meta["title"].nil? %>
-		<title>Some awesome site: <%= @meta["title"] %></title>
-	<% else %>
-		<title>Some awesome site</title>
-	<% end %>
+	<title>Some awesome site: <%= @meta["title"] %></title>
 </head>
 <body>
-	<h1>My first epic layout</h1>
+	<h1>My second epic layout:</h1>
 	<%= @body %>
 </body>
 </html>
